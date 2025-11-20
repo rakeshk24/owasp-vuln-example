@@ -40,7 +40,8 @@ def login():
 @app.route('/register', methods=['POST'])
 def register():
     data = request.get_json()
-
+    print("User registration endpoint called")  
+    
     if len(data.get('password', '')) > 1:
         hashed_password = hash_password(data['password'])
 
